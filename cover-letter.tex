@@ -1,0 +1,61 @@
+\documentclass[10pt, a4paper]{letter}
+\usepackage[margin=25mm]{geometry}  % for setting page margins
+\usepackage{xcolor}  % for setting colours
+\usepackage[pdfusetitle]{hyperref}  % control hyperlink formatting and auto-add PDF metadata
+\usepackage{fontawesome5}  % for icons like GitHub, email, mobile, etc.
+\usepackage{fontspec}  % for changing the default font
+\usepackage{lipsum}  % for filler text in the template
+\usepackage{tcolorbox,graphicx}  % for handwritten signature
+
+% Use the TeX Gyre Pagella font, similar to Palatino
+\setmainfont{TeX Gyre Pagella}
+
+% Define colours
+\definecolor{accent}{HTML}{888888}
+\definecolor{headings}{HTML}{000000}
+\definecolor{text}{HTML}{444444}
+\definecolor{misc}{HTML}{888888}
+\definecolor{background}{HTML}{ffffff}
+
+% Set global colours
+\color{text}
+\pagecolor{background}
+
+% Custom command for miscellaneous text
+\newcommand{\misc}[1]{\textcolor{misc}{\textit{#1}}}
+
+% Letter setup
+\title{R. Harish --- Cover Letter}
+\author{Harish Rajagopal}
+\signature{\unskip{}Harish Rajagopal}  % remove manual space for handwritten signature
+\input{sections/setup.tex}
+\date{\misc{\today}}
+
+% Miscellaneous options
+\hypersetup{%
+    colorlinks=true,  % do not draw boxes around links, color the links themselves
+    urlcolor=accent,
+    pdfsubject={Cover Letter},
+    pdfkeywords={cover letter}
+}
+\pagenumbering{gobble}  % hide page numbering
+\raggedbottom% align text to the top of the page
+
+\begin{document}
+
+\begin{letter}{\misc{\recipient}}
+
+\input{sections/header.tex}
+\vspace{1cm}
+\opening{\textcolor{headings}{\textbf{Dear \salutation,}}}
+\input{sections/body.tex}
+\closing{%
+    Best regards,\\
+    \tcbox[boxrule=-1pt,colback=background,nobeforeafter,boxsep=1mm]{%
+        \includegraphics[height=4\baselineskip]{signature.png}%
+    }%
+}
+
+\end{letter}
+
+\end{document}
