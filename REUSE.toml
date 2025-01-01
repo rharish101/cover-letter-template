@@ -1,0 +1,14 @@
+version = 1
+SPDX-PackageName = "Cover Letter Template"
+SPDX-PackageSupplier = "Harish Rajagopal <harish.rajagopals@gmail.com>"
+SPDX-PackageDownloadLocation = "https://github.com/rharish101/cover-letter"
+
+[[annotations]]
+path = "pic.jpg"
+SPDX-FileCopyrightText = "2022 Harish Rajagopal <harish.rajagopals@gmail.com>"
+SPDX-License-Identifier = "CC-BY-NC-ND-4.0"
+
+[[annotations]]
+path = "signature.png"
+SPDX-FileCopyrightText = "2022 Harish Rajagopal <harish.rajagopals@gmail.com>"
+SPDX-License-Identifier = "CC0-1.0"
